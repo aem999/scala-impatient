@@ -1,8 +1,8 @@
-Scala
-=====
+Scala Notes
+===========
 
 Scala notes and code
 
-REPL
-----
-Abbreviation for the Scala interpretor's *read-eval-print* loop.
+StyleGuide - [http://docs.scala-lang.org/style]
+
+REPL - abbreviation for the Scala interpretor's *read-eval-print* loop.
