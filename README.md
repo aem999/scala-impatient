@@ -43,3 +43,27 @@ This allows additional operations to be performed than are available on the the 
     
     "abc".interesect("cde")  // returns "c"
     1.to(10)                 // 1 is converted to a RichInt containing the to() method
+    
+    
+Operator Overloading
+--------------------
+Method calls can be written as:
+
+    a method b
+
+which is shorthand for:
+
+    a.method(b)
+
+Operators in Scala are actually methods:
+
+    a.+(b)
+
+which can be written as:
+
+    a + b
+
+i.e. Scala supports operator overloading. Thus we can use mathematcial operators with `BigDecimal` and `BigInt`:
+
+    val x: BigInt = 1234567890
+    val cube = x * x * x
