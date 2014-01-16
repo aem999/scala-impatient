@@ -67,3 +67,26 @@ i.e. Scala supports operator overloading. Thus we can use mathematcial operators
 
     val x: BigInt = 1234567890
     val cube = x * x * x
+
+
+Static Methods
+--------------
+Scala does not have static methods, instead it has *singleton objects*. This allows classes to have a *companion object* whose methods act like
+static methods in Java, e.g.:
+
+    BigInt.probablePrime(100, scala.util.Random)
+    
+`probablePrime` is a method on the `BigInt` companion object to the `BigInt` class.       
+
+
+The *apply* Method
+------------------
+The Scala compiler converts the shorthand
+
+    object()
+    
+into
+
+    object.apply()
+
+as a special syntax case.
