@@ -119,11 +119,20 @@ However, the former is better because it can be used to initialise a *val* where
 *Unit* Type
 -----------
 A data type that only holds one value () which means "no value". The *Unit* type is a subtype of *scala.AnyVal*.
-Scala methods with return type *Unit* are analogous to java methods declared *void*.
+Scala methods with return type *Unit* are analogous to java methods declared *void*:
 ```Scala
 val c = if (x > 1) 1
 ```
-is equivalent to
+is equivalent to:
 ```Scala 
 val c = if (x > 1) 1 else ()
+```
+
+
+Semicolons
+----------
+Semicolons are only required for terminating statements when they appear on the same line:
+```Scala
+if (x > 0) y3 = x; z3 = x * x;
+if (x > 0) { y3 = x; z3 = x * x }  // no semicolon required for 2nd statement due to the }
 ```
