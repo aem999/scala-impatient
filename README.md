@@ -136,3 +136,21 @@ Semicolons are only required for terminating statements when they appear on the 
 if (x > 0) y3 = x; z3 = x * x;
 if (x > 0) { y3 = x; z3 = x * x }  // no semicolon required for 2nd statement due to the }
 ```
+
+
+Line Continuation
+-----------------
+Long statements can be continued over multiple lines as long as the lines end in a symbol that *cannot* be the end of the statement,
+e.g. ending on an operator:
+```Scala 
+val sum = 3 +
+          2 + 
+          5          
+```
+e.g. using curly braces:
+```Scala
+if (x > 0) {
+  y3 = x
+  z3 = x * x
+}
+```
