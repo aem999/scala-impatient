@@ -114,3 +114,16 @@ this is equivalent to:
     if (x > y) largest = x else largest = y
     
 However, the former is better because it can be used to initialise a *val* whereas the latter needs to use a variable.
+
+
+*Unit* Type
+-----------
+A data type that only holds one value () which means "no value". The *Unit* type is a subtype of *scala.AnyVal*.
+Scala methods with return type *Unit* are analogous to java methods declared *void*.
+```Scala
+val c = if (x > 1) 1
+```
+is equivalent to
+```Scala 
+val c = if (x > 1) 1 else ()
+```
