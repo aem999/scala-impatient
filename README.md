@@ -101,3 +101,16 @@ object.apply()
 ```
 as a special syntax case.
 
+
+Conditional Expressions
+-----------------------
+Scala *if/else* expressions have a value which can be assigned to a variable:
+
+    val largest = if (x > y) x else y
+    
+this is equivalent to:
+
+    var largest
+    if (x > y) largest = x else largest = y
+    
+However, the former is better because it can be used to initialise a *val* whereas the latter needs to use a variable.
