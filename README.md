@@ -25,10 +25,10 @@ Variables
 ---------
 ```Scala
 val xmax = 100        // constant (type is inferred)
-val xmax: Int = 100   // constant of type String
+val xmax: Int = 100   // constant of type Int
 var xmax = 100        // mutable value (type is inferred)    
-val xmax, ymax = 100  // declare multiple values
-var x, y = 0          // declare multiple variables
+val xmax, ymax = 100  // declare multiple values (type is inferred)
+var x, y = 0          // declare multiple variables (type is inferred)
 ```
 
 Data Types
