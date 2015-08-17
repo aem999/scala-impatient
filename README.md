@@ -14,6 +14,7 @@ Sections
 1. [Basics (Variables, Data Types, Methods)](01-Basics.md)
 2. [Control Structures and Functions](02-ControlStructures.md)
 3. [Arrays](03-Arrays.md)
+4. [Maps and Tuples](04-MapsTuples.md)
 
 
 REPL

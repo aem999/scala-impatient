@@ -120,8 +120,8 @@ ragged(0) = new Array[Int](2)                    // ragged: Array[Array[Int]] = 
 ragged(1) = new Array[Int](3)                    // ragged: Array[Array[Int]] = Array(Array(0, 0), Array(0, 0, 0))
 ```
 
-Converting Scala ArrayBuffers to Java Arrays
---------------------------------------------
+Converting between Scala ArrayBuffers and Java Arrays
+-----------------------------------------------------
 To pass a Scala `ArrayBuffer` to a method expecting a Java array, import the implicit conversion methods in 
 `scala.collection.JavaConversions`. Then you can use Scala buffers in your code, and they automatically get wrapped into
 Java lists when calling a Java method:
@@ -137,6 +137,6 @@ Conversely, when a Java method returns a `java.util.List`, you can have it autom
 ```Scala
 import scala.collection.JavaConversions.asScalaBuffer
 import scala.collection.mutable.Buffer
-val cmd: Buffer[String] = pb.command()         // Java to Scala
+val cmd: Buffer[String] = pb.command()           // Java to Scala
 ```
 
