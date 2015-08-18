@@ -104,7 +104,6 @@ for (v <- linkedMap.keys) println(v)             // Alice Fred Bob
 Note - there is (as of Scala 2.9) no mutable tree map. Instead adapt a Java `TreeMap`.
 
 
-
 Converting between Scala and Java Maps
 --------------------------------------
 To convert from a Java Map to a Scala Map:

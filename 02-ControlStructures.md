@@ -143,7 +143,7 @@ Note - the `return` keyword is used in Scala to break out of a function early *n
 Procedures
 ----------
 *Procedures* are functions that return no value. A function body enclosed in braces without a preceding = symbol will 
-have a `Unit` return type and thsu will be a procedure which is only called for it's side effect:
+have a `Unit` return type and thus will be a procedure which is only called for it's side effect:
 ```Scalas
 def abs(x: Double) = {if (x >= 0) x else -x}        // abs: abs[](val x: Double) => Double (function)               
 def abs(x: Double) {if (x >= 0) x else -x}          // abs: abs[](val x: Double) => Unit (procedure)

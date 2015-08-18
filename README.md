@@ -15,6 +15,7 @@ Sections
 2. [Control Structures and Functions](02-ControlStructures.md)
 3. [Arrays](03-Arrays.md)
 4. [Maps and Tuples](04-MapsTuples.md)
+5. [Classes](05-Classes.md)
 
 
 REPL
@@ -38,3 +39,7 @@ Option 2 - use *:paste*:
 2. Paste in the code block
 3. Type *Ctrl+K*
 ```
+
+References
+----------
+[Scala for the Impatient](http://www.horstmann.com/scala/index.html)
