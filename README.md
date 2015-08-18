@@ -16,6 +16,7 @@ Sections
 3. [Arrays](03-Arrays.md)
 4. [Maps and Tuples](04-MapsTuples.md)
 5. [Classes](05-Classes.md)
+6. [Objects](06-Objects.md)
 
 
 REPL

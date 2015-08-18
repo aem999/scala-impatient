@@ -6,14 +6,14 @@ mutator methods and to drop the `()` for accessor methods:
 ```Scala
 val myCounter = new Counter()                    // Or new Counter
 myCounter.increment()                            // Mutator method uses ()
-println(myCounter.current)                       // Accessor method foes not use ()
+println(myCounter.current)                       // Accessor method does not use ()
 ```
 
 This convention can be enforced so that the class user must use `myCounter.current`, without parentheses:
 ```Scala
 class Counter {
  ...
- def current = value                            // No () in definition
+ def current = value                             // No () in definition
 }
 ```
 
@@ -73,7 +73,7 @@ public class MyClass {
   private int field5;
   private final int field6;
   public int field1();
-  public void field1_$eq(int);                 // The JVM does not allow = in methodname so compiles to _$eq in bytecode
+  public void field1_$eq(int);         // The JVM does not allow = in methodname so compiles to _$eq in bytecode
   private int field2();
   private void field2_$eq(int);
   public int field3();
