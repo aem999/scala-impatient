@@ -130,7 +130,7 @@ An *abstract field* is simply a field without an initial value (the generated Ja
 subclasses must provide concrete fields.
 ```Scala
 abstract class Person {
-  val id: Int                                // No initializer, this is an abstract field with an abstract getter method
+  val id: Int                                // No initializer, this is an abstract field with an abstract getter
   var name: String                           // Another abstract field, with abstract getter and setter methods
 }
 class Employee(val id: Int) extends Person { // Subclass has concrete id property
@@ -186,7 +186,7 @@ class Ant extends {
 This is more commonly used with traits. The code below will throw a `NullPointerException` when `MyFoo` is created because 
 `bar` will not yet be defined when `bar.length()` is invoked:
 ```Scala
-trait Foo{
+trait Foo {
   val bar:String
   val barLength = bar.length()
 }
@@ -209,15 +209,18 @@ The Scala Inheritance Hierarchy
 -------------------------------
 ![Scala Inheritance Hierarchy](classhierarchy.png?raw=true)
 
-    Any          - the root of the hierarchy. Defines methods *isInstanceOf*, *asInstanceOf*, and the methods for equality and hash codes
-    AnyVal       - classes that correspond to Java primitives plus *Unit()*. Just a marker interface, does not add any new methods
-    AnyRef       - synonym of Java *Object* class. Adds the monitor methods *wait/notify/notifyAll* from the *Object* class. It 
-                   also provides a synchronized method with a function parameter `account.synchronized { account.balance += amount }`
+    Any          - the root of the hierarchy. Defines methods *isInstanceOf*, *asInstanceOf*, and the methods for 
+                   equality and hash codes
+    AnyVal       - classes that correspond to Java primitives plus *Unit()*. Just a marker interface, does not add any 
+                   new methods
+    AnyRef       - synonym of Java *Object* class. Adds the monitor methods *wait/notify/notifyAll* from the *Object* 
+                   class. It also provides a synchronized method with a function parameter 
+                   `account.synchronized { account.balance += amount }`
     ScalaObject  - marker interface with no methods and is implemented by all Scala classes
-    Null type    - the type whose sole instance is the value *null*. You can assign null to any reference, but not to one of 
-                   the value types. For example, setting an Int to null is not possible.
-    Nothing type - the Nothing type has no instances. It is occasionally useful for generic constructs, e.g. the empty list
-                   Nil has type List[Nothing], which is a subtype of List[T] for any T.
+    Null type    - the type whose sole instance is the value *null*. You can assign null to any reference, but not to 
+                   one of the value types. For example, setting an *Int* to *null* is not possible.
+    Nothing type - the *Nothing* type has no instances. It is occasionally useful for generic constructs, e.g. the empty 
+                   list *Nil* has type *List[Nothing]*, which is a subtype of *List[T]* for any *T*.
  
  
 Object Equality
@@ -233,7 +236,7 @@ class Item(val description: String, val price: Double) {
   }
 }
 ```
-The equals method parameter type must be `Any`. The following would be wrong `final def equals(other: Item) = { ... }`.
+The equals method parameter type must be `Any`. The following would be wrong `final def equals(other: Item) = {...}`.
 This is a different method that does not override the equals method of `AnyRef`.
 
 We defined the method as `final` because it is generally very difficult to correctly extend equality in a subclass. The 
