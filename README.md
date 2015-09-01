@@ -18,6 +18,7 @@ Sections
 5. [Classes](05-Classes.md)
 6. [Objects](06-Objects.md)
 7. [Packages](07-Packages.md)
+8. [Inheritance](08-Inheritance.md)
 
 
 REPL

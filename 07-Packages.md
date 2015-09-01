@@ -78,7 +78,7 @@ Chained Package Clauses
 *Chained package clauses* limits the scope of visible names:
 ```Scala
 package com.myco {
-  // Members of com and com.myco are not visible here
+  // Members of com are not visible here
   package people {
     class Person
     ...
@@ -114,7 +114,7 @@ Package Visibility
 ```Scala
 package com.myco.people
   class Person {
-    private[people] def description = "A person with name " + name
+    private[people] def description = "A person with name " + name   // only visible to people package or below
     ...
   }
 }
@@ -131,6 +131,7 @@ Imports
 ```Scala
 import java.awt.Color                            // can write Color instead of java.awt.Color
 import java.awt._                                // import all members of the java.awt package
+import java.awt.{_}                              // same as java.awt._
 import java.awt.Color._                          // import all members of the Color class (like Java static import)
 import java.awt.{Color, Font}                    // Selector to import specific package members 
 import java.util.{HashMap => JavaHashMap}        // Selector to rename a member (rename HashMap to JavaHashMap)

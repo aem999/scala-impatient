@@ -23,7 +23,7 @@ Calling `Accounts.newUniqueNumber()` for the first time causes the `Accounts` co
 Companion Objects
 -----------------
 A *companion object*  is a singleton object that shares the same name with a class defined in the same source file. 
-*Companion objects* and classes have access to each other’s private members. In addition, any implicit conversions 
+*Companion objects* and classes have access to each otherâ€™s private members. In addition, any implicit conversions 
 defined in the companion object will be in scope anywhere the class is used.
 ```Scala
 class Account {
@@ -50,7 +50,7 @@ abstract class UndoableAction(val description: String) {
   def undo(): Unit
   def redo(): Unit
 }
-// “do nothing” action is a useful default
+// â€œdo nothingâ€ action is a useful default
 object DoNothingAction extends UndoableAction("Do nothing") {
   override def undo() {}
   override def redo() {}
@@ -92,7 +92,7 @@ val b = new Array(100)            // calls the constructor this(100), yielding a
 
 Application object
 ------------------
-Scala programs start with an object’s main method of type `Array[String] => Unit`:
+Scala programs start with an objectâ€™s main method of type `Array[String] => Unit`:
 ```Scala
 object Hello {
   def main(args: Array[String]) {

@@ -12,7 +12,7 @@ primitive types is implemented as a primitive type array in the JVM:
 ```Scala
 val n = new Array[Int](10)             // An array of ten integers, all initialized with zero
 val a = new Array[String](10)          // A string array with ten elements, all initialized with null
-val s = Array("Hello", "World")        // An Array[String] of length 2óthe type is inferred
+val s = Array("Hello", "World")        // An Array[String] of length 2‚Äîthe type is inferred
                                        // Note: No new when you supply initial values
 ```
 
@@ -25,7 +25,7 @@ s(0)                                   // res0: String = Hello
 *ArrayBuffer* - Variable Length Array
 -------------------------------------
 The Scala `ArrayBuffer` is equivlent to a Java `ArrayList` and is used for arrays that grow and shrink on demand. Adding 
-or removing elements at the end of an array buffer is an efficient (ìamortized constant timeî) operation.
+or removing elements at the end of an array buffer is an efficient (‚Äúamortized constant time‚Äù) operation.
 ```Scala
 import scala.collection.mutable.ArrayBuffer
 val b  = ArrayBuffer[Int]()             // An empty array buffer, ready to hold integers

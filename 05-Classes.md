@@ -20,7 +20,7 @@ class Counter {
 
 Class-private and Object-private Fields
 ---------------------------------------
-In Scala (as well as in Java, a method can access the private fields of all objects of its class. For example:
+In Scala (as well as in Java), a method can access the private fields of all objects of its class. For example:
 ```Scala
 class Counter {
  private var value = 0
@@ -38,8 +38,9 @@ and a getter/setter is *not* generated.
 
 Getters and Setters
 -------------------
-Scala provides *getter* and *setter* methods for every field. Getters have the form `fieldname()` and setters have the 
-form `fieldname_=(param)`. The visibility of these methods is determined by how the fields have been declared:
+A *field* in Scala consists of a private field and accessor/mutator methods. Scala provides *getter* and *setter* methods 
+for every field. Getters have the form `fieldname()` and setters have the form `fieldname_=(param)`. The visibility of 
+these methods is determined by how the fields have been declared:
     
     var               - public getter and setter, field made private
     private var       - private getter/setter, field made private
@@ -92,7 +93,7 @@ class Person {
   def age = privateAge
   def age_=(newValue: Int) {
     if (newValue > privateAge) 
-      privateAge = newValue;                     // Can’t get younger
+      privateAge = newValue;                     // Canâ€™t get younger
   }
 }
 ```
@@ -134,7 +135,7 @@ class Person(@BeanProperty var name: String)
 Primary Constructor
 -------------------
 A Scala class has one *primary constructor* and zero or more *auxiliary constructors*. Every Scala class has a *primary 
-constructor* and it is supplied with the class definition or if you don’t define one the class will have a *primary 
+constructor* and it is supplied with the class definition or if you donâ€™t define one the class will have a *primary 
 constructor* with no arguments. The parameters of the *primary constructor* are placed immediately after the class name 
 and they turn into fields that are initialized with the construction parameter values. The *primary constructor* executes 
 *all statements in the class definition* (the `println` statement in the example below:

@@ -102,7 +102,7 @@ it is a *filter*:
 for (i <- 1 to 10) 
   yield i % 3       // res0: scala.collection.immutable.IndexedSeq[Int] = Vector(1, 2, 0, 1, 2, 0, 1, 2, 0, 1)
 ```  
-
+```Scala
 val d = Array(2, 3, 5, 7, 11)
 for (elem <- d) yield 2 * elem                   // Array(4, 6, 10, 14, 22)
 for (elem <- d if elem % 2 == 0) yield 2 * elem  // Array(4)
