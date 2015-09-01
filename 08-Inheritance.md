@@ -41,9 +41,9 @@ Type Checks and Casts
 ---------------------
 Scala provides the following methods for type checking:
 ```Scala
-obj.getClass == classOf[Class]              // obj is an instance of Class                          
-obj.isInstanceOf[Class]                     // obj is an instance of Class or a Subclass (returns false if obj is null)
-obj.asInstanceOf[Class]                     // cast obj to an instance of Class
+obj.getClass == classOf[Class]      // obj is an instance of Class                          
+obj.isInstanceOf[Class]             // obj is an instance of Class or a Subclass (returns false if obj is null)
+obj.asInstanceOf[Class]             // cast obj to an instance of Class
 ```
 
 However, pattern matching is usually a better alternative to using type checks and casts:
@@ -87,7 +87,7 @@ class Person(val name: String) {
   override def toString = getClass.getName + "[name=" + name + "]"
 }
 class SecretAgent(codename: String) extends Person(codename) {
-  override val name = "secret"                   // Don�t want to reveal name...
+  override val name = "secret"                   // Don't want to reveal name...
   override val toString = "secret"               // ...or class name
 }
 ```
@@ -211,16 +211,16 @@ The Scala Inheritance Hierarchy
 
     Any          - the root of the hierarchy. Defines methods *isInstanceOf*, *asInstanceOf*, and the methods for 
                    equality and hash codes
-    AnyVal       - classes that correspond to Java primitives plus *Unit()*. Just a marker interface, does not add any 
-                   new methods
+    AnyVal       - classes that correspond to Java primitives plus *Unit()*. Just a marker interface, does not add 
+                   any new methods
     AnyRef       - synonym of Java *Object* class. Adds the monitor methods *wait/notify/notifyAll* from the *Object* 
                    class. It also provides a synchronized method with a function parameter 
                    `account.synchronized { account.balance += amount }`
     ScalaObject  - marker interface with no methods and is implemented by all Scala classes
-    Null type    - the type whose sole instance is the value *null*. You can assign null to any reference, but not to 
-                   one of the value types. For example, setting an *Int* to *null* is not possible.
-    Nothing type - the *Nothing* type has no instances. It is occasionally useful for generic constructs, e.g. the empty 
-                   list *Nil* has type *List[Nothing]*, which is a subtype of *List[T]* for any *T*.
+    Null type    - the type whose sole instance is the value *null*. You can assign null to any reference, but not 
+                   to one of the value types. For example, setting an *Int* to *null* is not possible.
+    Nothing type - the *Nothing* type has no instances. It is occasionally useful for generic constructs, e.g. the 
+                   empty list *Nil* has type *List[Nothing]*, which is a subtype of *List[T]* for any *T*.
  
  
 Object Equality
